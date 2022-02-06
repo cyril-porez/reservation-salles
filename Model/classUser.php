@@ -1,7 +1,7 @@
 <?php
     
     require_once('Model.php');
-
+    
     class User extends Model {
 
         private $password;
@@ -26,7 +26,7 @@
 
 
         public function updateLogin($login) {
-            $user = $_SESSION["user"];
+            $user = $_SESSION["user"]["login"];
             $this->login = $login;
             $sql = "UPDATE utilisateurs SET login = :login where login = :user"; 
             $requete = $this->connex->prepare($sql);
@@ -37,7 +37,7 @@
 
 
         public function updatePassword($password) {
-            $user = $_SESSION["user"];
+            $user = $_SESSION["user"]["login"];
             $this->password = $password;
             $sql = "UPDATE utilisateurs SET password = :password where login = :user";
             $requete = $this->connex->prepare($sql);
@@ -73,5 +73,5 @@
     }
 
     /*$user = new User();
-    $user->infoUser();*/
+    $user->updateLogin('jerry');*/
 ?>

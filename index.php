@@ -1,13 +1,12 @@
 <?php
     session_start();
-    echo $_SESSION["user"]['login'];
 ?>
 
 <html>
 <body>
     <header>
         <?php
-            require_once('header.php');
+            require_once('View/header.php');
         ?>
     </header>
     <main>

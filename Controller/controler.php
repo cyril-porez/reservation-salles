@@ -1,6 +1,6 @@
 <?php
-    require_once('./Model/RegisterAuth.php');
-    require_once('./Model/classUser.php');
+    require_once('../Model/RegisterAuth.php');
+    require_once('../Model/classUser.php');
 
     class Controler {
        public $login;
@@ -29,7 +29,7 @@
                 $newUser = new User();
                 $user = $newUser->infoUser($this->login);
                 $_SESSION["user"] = $user;
-                header("Location: index.php");
+                header("Location: ../index.php");
             }
         }
 

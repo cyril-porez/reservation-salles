@@ -1,6 +1,6 @@
 <?php
-    require_once('./Model/RegisterAuth.php');
-    require_once('./Model/classUser.php');
+    require_once('../Model/RegisterAuth.php');
+    require_once('../Model/classUser.php');
 
     class ControllerUser  {
         public $login;
@@ -27,8 +27,12 @@
                 if ($count == 0) {
                     $updateLogin = new User();
                     $updateLogin->updateLogin($this->login);
-                    $_SESSION["user"] = $login;
-                    header("refresh: 0");   
+                    $infoUser = $updateLogin->infoUser($this->login);
+                    $_SESSION["user"] = [
+                                            'id' => $infoUser['id'], 
+                                            'login' => $this->login, 
+                                            'password' => $infoUser['password'],
+                                        ];  
                 }
             }
         }

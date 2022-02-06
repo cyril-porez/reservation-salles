@@ -28,9 +28,7 @@ class RegisterAuth extends Model{
         $sql = "SELECT login From utilisateurs WHERE login = '$this->login'";
         $result = $this->connex->query($sql);        
         $user = $result->fetchAll(PDO::FETCH_ASSOC);
-        var_dump($user);
         $this->count = $result->rowCount();
-        echo $this->count;
         return $this->count;
     }
     
@@ -40,7 +38,6 @@ class RegisterAuth extends Model{
         $sql = "SELECT password FROM utilisateurs WHERE login = '$this->login'";
         $result = $this->connex->query($sql);
         $user = $result->fetchall(PDO::FETCH_ASSOC);
-        var_dump($user);
         return $user;
     }
 }  

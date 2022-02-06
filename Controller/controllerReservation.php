@@ -1,5 +1,5 @@
 <?php
-    require_once('./Model/classReservation.php');
+    require_once('../Model/classReservation.php');
 
     class controllerReservation {
 
