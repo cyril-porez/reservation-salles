@@ -10,7 +10,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.php">Accueil</a></li>
+                <li><a href="../index.php">Accueil</a></li>
                 <li><a href="connexion.php">Connexion</a></li>
                 <li><a href="inscription.php">Inscription</a></li>
                 <li><a href="profil.php">Profil</a></li>
@@ -20,7 +20,9 @@
                 <li><a href="deconnexion.php">Deconnexion</a></li>
             </ul>
             <?php
-                echo "Bonjour" . " " . $_SESSION["user"]["login"] . " !";
+                if (!empty($_SESSION)) {
+                    echo "Bonjour" . " " . $_SESSION["user"]["login"] . " !";
+                }
             ?>
         </nav>
     </header>

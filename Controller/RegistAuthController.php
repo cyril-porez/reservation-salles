@@ -2,7 +2,7 @@
     require_once('../Model/RegisterAuth.php');
     require_once('../Model/classUser.php');
 
-    class Controler {
+    class RegistAuth {
        public $login;
        public $password;
        public $confirmPassword;

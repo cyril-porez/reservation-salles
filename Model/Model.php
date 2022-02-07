@@ -1,7 +1,7 @@
 <?php
     require_once('bdd.php');
 
-    class Model extends Bdd2 {
+    abstract class Model {
 
         public function __construct() { 
             // $this->pdo = new Bdd2();

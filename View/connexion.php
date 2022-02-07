@@ -1,10 +1,10 @@
 <?php 
 session_start();
-require_once('../Controller/controler.php');
+require_once('../Controller/RegistAuthController.php');
 //var_dump($_SESSION["user"]);
 
-if (isset($_POST["login"]) && isset($_POST["password"])) {
-    $auth = new Controler;
+if (!empty($_POST["login"]) && !empty($_POST["password"])) {
+    $auth = new RegistAuth;
     $auth->connexionUser($_POST["login"], $_POST["password"]);
 }
 

@@ -1,39 +1,24 @@
 <?php 
   
-  require_once('../Controller/controler.php');
+  require_once('../Controller/RegistAuthController.php');
   
   $message = "";
   
  
-  if (isset($_POST["login"]) && isset($_POST["password"]) && isset($_POST["confirmPassword"]) ) {
+  if (!empty($_POST["login"]) && !empty($_POST["password"]) && !empty($_POST["confirmPassword"]) ) {
     
-    $register = new Controler();
+    $register = new RegistAuth();
     $register->createUser($_POST["login"], $_POST["password"], $_POST["confirmPassword"]);
   }
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="page.css">
-</head>
 
 <body class="body_inscription">
     <header>
-        <nav>
-            <a href="index.php">Accueil</a>
-                <?php 
-                   
-            ?>
-               
-            
-            <div class="animation start-home"></div>
-
-        </nav>
+        <?php
+          require_once('header.php');
+        ?>
     </header>
   <main>
     <form action= "" method= "post" class="reservations_salles">
