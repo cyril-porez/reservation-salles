@@ -1,6 +1,6 @@
 <?php
-    require_once('../Model/classUser.php');
+    require_once('../Model/User.php');
 
-    $disconnect = new User ();
+    $disconnect = new \Models\User ();
     $disconnect->disconnect();
 ?>
