@@ -2,7 +2,8 @@
 
     namespace Models;
     
-    require_once('Model.php');
+    //require_once('Model.php');
+    require_once('../autoload.php');
     
     class Reservation extends Model {
        public $startTime;

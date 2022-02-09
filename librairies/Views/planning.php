@@ -1,5 +1,7 @@
 <?php
-    require_once('../Controller/Reservation.php');
+    //require_once('../Controller/Reservation.php');
+    require_once('../autoload.php');
+
     session_start();
     if (!isset($_SESSION['date'])) {
         $_SESSION['date'] = 0;

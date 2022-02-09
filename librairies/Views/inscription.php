@@ -1,7 +1,7 @@
 <?php 
   
-  require_once('../Controller/RegisterAuth.php');
-  
+  //require_once('../Controller/RegisterAuth.php');
+  require_once('../autoload.php');
   $message = "";
   
  

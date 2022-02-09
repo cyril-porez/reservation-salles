@@ -2,8 +2,9 @@
 
     namespace Controllers;
 
-    require_once('../Model/RegisterAuth.php');
-    require_once('../Model/User.php');
+    //require_once('../Model/RegisterAuth.php');
+    //require_once('../Model/User.php');
+    require_once('../autoload.php');
 
     class RegisterAuth {
        public $login;
@@ -32,7 +33,7 @@
                 $newUser = new \Models\User();
                 $user = $newUser->infoUser($this->login);
                 $_SESSION["user"] = $user;
-                header("Location: ../index.php");
+                header("Location: ../../index.php");
             }
         }
 

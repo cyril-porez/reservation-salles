@@ -1,7 +1,8 @@
 <?php 
 session_start();
-require_once('../Controller/RegisterAuth.php');
+//require_once('../Controller/RegisterAuth.php');
 //var_dump($_SESSION["user"]);
+require_once('../autoload.php');
 
 if (!empty($_POST["login"]) && !empty($_POST["password"])) {
     $auth = new \Controllers\RegisterAuth;

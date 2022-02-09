@@ -1,7 +1,8 @@
 <?php
     namespace Controllers;
 
-    require_once('../Model/Reservation.php');
+    //require_once('../Model/Reservation.php');
+    require_once('../autoload.php');
 
     class Reservation {
 

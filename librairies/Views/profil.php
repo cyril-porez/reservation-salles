@@ -1,9 +1,9 @@
 <?php 
   session_start();
   //require_once('bdd.php');
-  require_once('../Model/User.php');
-  require_once('../Controller/User.php');
-  
+  //require_once('../Model/User.php');
+  //require_once('../Controller/User.php');
+  require_once('../autoload.php');
 
   if (!empty($_POST["login"])) {
     $login = $_POST["login"];

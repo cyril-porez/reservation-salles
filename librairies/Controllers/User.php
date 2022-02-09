@@ -1,8 +1,9 @@
 <?php
 
     namespace Controllers;
-    require_once('../Model/RegisterAuth.php');
-    require_once('../Model/User.php');
+    //require_once('../Model/RegisterAuth.php');
+    //require_once('../Model/User.php');
+    require_once('../autoload.php');
 
     class User  {
         public $login;
