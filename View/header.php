@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/inscription.css">
+    <link rel="stylesheet" href="css/connexion.css">
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
     <header>
@@ -26,11 +31,11 @@
             ?>
         </nav>
     </header>
-    <main>
+    <!-- <main>
 
     </main>
     <footer>
 
-    </footer>
+    </footer> -->
 </body>
 </html>
