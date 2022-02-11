@@ -1,6 +1,9 @@
 <?php
     
-    require_once('Model.php');
+    namespace Models;
+
+    //require_once('Model.php');
+    require_once('../autoload.php');
     
     class User extends Model {
 
@@ -18,9 +21,9 @@
             $this->login = $login;
             $sql = "SELECT * from utilisateurs where login = :login";
             $requete = $this->connex->prepare($sql);
-            $requete->bindValue(':login', $this->login, PDO::PARAM_STR);
+            $requete->bindValue(':login', $this->login, \PDO::PARAM_STR);
             $requete->execute();
-            $user = $requete->fetch(PDO::FETCH_ASSOC);
+            $user = $requete->fetch(\PDO::FETCH_ASSOC);
             return $user;
         }
 
@@ -30,8 +33,8 @@
             $this->login = $login;
             $sql = "UPDATE utilisateurs SET login = :login where login = :user"; 
             $requete = $this->connex->prepare($sql);
-            $requete->bindValue(':login', $this->login, PDO::PARAM_STR);
-            $requete->bindValue(':user', $user, PDO::PARAM_STR);
+            $requete->bindValue(':login', $this->login, \PDO::PARAM_STR);
+            $requete->bindValue(':user', $user, \PDO::PARAM_STR);
             $requete->execute(); 
         }
 
@@ -41,8 +44,8 @@
             $this->password = $password;
             $sql = "UPDATE utilisateurs SET password = :password where login = :user";
             $requete = $this->connex->prepare($sql);
-            $requete->bindValue(':password', $this->password, PDO::PARAM_STR);
-            $requete->bindValue(':user', $user, PDO::PARAM_STR);
+            $requete->bindValue(':password', $this->password, \PDO::PARAM_STR);
+            $requete->bindValue(':user', $user, \PDO::PARAM_STR);
             $requete->execute(); 
         }
 
@@ -56,11 +59,11 @@
 
             $sql = "INSERT into reservations (titre, description, debut, fin, id_utilisateur) VALUES (:title, :description, :start, :end, :idUser)";
             $requete = $this->connex->prepare($sql);
-            $requete->bindValue(':title', $this->title, PDO::PARAM_STR);
-            $requete->bindValue(':description', $this->description, PDO::PARAM_STR);
-            $requete->bindValue(':start', $this->start, PDO::PARAM_STR);
-            $requete->bindValue(':end', $this->end, PDO::PARAM_STR);
-            $requete->bindValue(':idUser', $idUser, PDO::PARAM_STR);
+            $requete->bindValue(':title', $this->title, \PDO::PARAM_STR);
+            $requete->bindValue(':description', $this->description, \PDO::PARAM_STR);
+            $requete->bindValue(':start', $this->start, \PDO::PARAM_STR);
+            $requete->bindValue(':end', $this->end, \PDO::PARAM_STR);
+            $requete->bindValue(':idUser', $idUser, \PDO::PARAM_STR);
             $requete->execute();
         }
 
@@ -71,7 +74,4 @@
             header("Location: connexion.php");
         }
     }
-
-    /*$user = new User();
-    $user->updateLogin('jerry');*/
 ?>

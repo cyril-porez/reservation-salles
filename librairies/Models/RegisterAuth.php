@@ -1,6 +1,9 @@
 <?php
 
-require_once('Model.php');
+namespace Models;
+
+//require_once('Model.php');
+require_once('../autoload.php');
 
 class RegisterAuth extends Model{
     public $connex;
@@ -13,8 +16,8 @@ class RegisterAuth extends Model{
             $sql = "INSERT into utilisateurs (login, password) values (:login, :passwordUser)";         
             //on prepare la requete
             $requete = $this->connex->prepare($sql);
-            $requete->bindValue(":login", $login, PDO::PARAM_STR);
-            $requete->bindValue(":passwordUser", $passwordUser, PDO::PARAM_STR);
+            $requete->bindValue(":login", $login, \PDO::PARAM_STR);
+            $requete->bindValue(":passwordUser", $passwordUser, \PDO::PARAM_STR);
             //execute la requete
             $requete->execute();
         } catch (PDOException $e) {
@@ -27,7 +30,7 @@ class RegisterAuth extends Model{
         $this->login = $login; 
         $sql = "SELECT login From utilisateurs WHERE login = '$this->login'";
         $result = $this->connex->query($sql);        
-        $user = $result->fetchAll(PDO::FETCH_ASSOC);
+        $user = $result->fetchAll(\PDO::FETCH_ASSOC);
         $this->count = $result->rowCount();
         return $this->count;
     }
@@ -37,7 +40,7 @@ class RegisterAuth extends Model{
         $this->login = $login;
         $sql = "SELECT password FROM utilisateurs WHERE login = '$this->login'";
         $result = $this->connex->query($sql);
-        $user = $result->fetchall(PDO::FETCH_ASSOC);
+        $user = $result->fetchall(\PDO::FETCH_ASSOC);
         return $user;
     }
 }  

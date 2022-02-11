@@ -1,8 +1,12 @@
 <?php
-    require_once('../Model/RegisterAuth.php');
-    require_once('../Model/classUser.php');
 
-    class RegistAuth {
+    namespace Controllers;
+
+    //require_once('../Model/RegisterAuth.php');
+    //require_once('../Model/User.php');
+    require_once('../autoload.php');
+
+    class RegisterAuth {
        public $login;
        public $password;
        public $confirmPassword;
@@ -12,7 +16,7 @@
                 $this->login;
             
                 $hash = password_hash($password, PASSWORD_ARGON2I);
-                $insc = new RegisterAuth();
+                $insc = new \Models\RegisterAuth();
                 $insc->register($this->login, $hash);
                 header("Location: connexion.php");
             }
@@ -22,14 +26,14 @@
         public function verifyPassword($password, $login) {
             $this->password = $password;
             $this->login = $login;
-            $recupPassworHash = new RegisterAuth();
+            $recupPassworHash = new \Models\RegisterAuth();
             $passHash = $recupPassworHash->selectPassHash($this->login);
 
             if (password_verify($this->password, $passHash[0]["password"])) {
-                $newUser = new User();
+                $newUser = new \Models\User();
                 $user = $newUser->infoUser($this->login);
                 $_SESSION["user"] = $user;
-                header("Location: ../index.php");
+                header("Location: ../../index.php");
             }
         }
 
@@ -38,7 +42,7 @@
             $this->login = $login;
             $this->password;
             $this->confirmPassword;
-            $selectLogin = new RegisterAuth();
+            $selectLogin = new \Models\RegisterAuth();
             $count = $selectLogin->selectCountLogin($this->login);
             
             if ($count == 0) {

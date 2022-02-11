@@ -1,8 +1,11 @@
 <?php
-    require_once('../Model/RegisterAuth.php');
-    require_once('../Model/classUser.php');
 
-    class ControllerUser  {
+    namespace Controllers;
+    //require_once('../Model/RegisterAuth.php');
+    //require_once('../Model/User.php');
+    require_once('../autoload.php');
+
+    class User  {
         public $login;
         public $password;
         public $confirmPassword;
@@ -21,11 +24,11 @@
             if (!empty($_POST["login"])) {
                 $login = $_POST["login"];
                 $this->login = $login;
-                $selectLogin = new RegisterAuth();
+                $selectLogin = new \Models\RegisterAuth();
                 $count = $selectLogin->selectCountLogin($this->login);
                
                 if ($count == 0) {
-                    $updateLogin = new User();
+                    $updateLogin = new \Models\User();
                     $updateLogin->updateLogin($this->login);
                     $infoUser = $updateLogin->infoUser($this->login);
                     $_SESSION["user"] = [
@@ -47,7 +50,7 @@
                 
                 if ($password == $confirmPassword) {
                     $hash = password_hash($password, PASSWORD_DEFAULT);
-                    $updatePassword = new User();
+                    $updatePassword = new \Models\User();
                     $updatePassword->updatePassword($hash);
                 }
             }
@@ -61,7 +64,7 @@
             $this->fin = $fin;
             $this->idUser = $idUser;
 
-            $reservation = new User();
+            $reservation = new \Models\User();
             $reservation->reservation($this->titre, $this->description, $this->debut, $this->fin, $this->idUser);            
         }
     }

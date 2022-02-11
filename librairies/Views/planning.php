@@ -1,5 +1,7 @@
 <?php
-    require_once('../Controller/controllerReservation.php');
+    //require_once('../Controller/Reservation.php');
+    require_once('../autoload.php');
+
     session_start();
     if (!isset($_SESSION['date'])) {
         $_SESSION['date'] = 0;
@@ -34,7 +36,7 @@
             </thead>
             <tbody>
                 <?php
-                    $reservation = new controllerReservation();
+                    $reservation = new \Controllers\Reservation();
                     $reservation->displayPlanning();
                 ?>
             </tbody>

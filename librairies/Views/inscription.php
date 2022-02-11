@@ -1,13 +1,13 @@
 <?php 
   
-  require_once('../Controller/RegistAuthController.php');
-  
+  //require_once('../Controller/RegisterAuth.php');
+  require_once('../autoload.php');
   $message = "";
   
  
   if (!empty($_POST["login"]) && !empty($_POST["password"]) && !empty($_POST["confirmPassword"]) ) {
     
-    $register = new RegistAuth();
+    $register = new \Controllers\RegisterAuth();
     $register->createUser($_POST["login"], $_POST["password"], $_POST["confirmPassword"]);
   }
 ?>

@@ -1,7 +1,7 @@
 <?php
     session_start();
-    require_once('../Controller/ControllerUser.php');
-
+    //require_once('../Controller/User.php');
+    require_once('../autoload.php');
     if (!empty($_POST["titre"]) && !empty($_POST["description"]) && !empty($_POST["début"]) && !empty($_POST["fin"])) {
         $title = $_POST["titre"];
         $description = $_POST["description"];
@@ -9,7 +9,7 @@
         $end = $_POST["fin"];
         $idUser = $_SESSION['user']['id'];
 
-        $reservation = new ControllerUser();
+        $reservation = new \Controllers\User();
         $reservation->reservation($title, $description, $start, $end, $idUser);
     }
 ?>

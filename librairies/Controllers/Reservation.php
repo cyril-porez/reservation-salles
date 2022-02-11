@@ -1,7 +1,10 @@
 <?php
-    require_once('../Model/classReservation.php');
+    namespace Controllers;
 
-    class controllerReservation {
+    //require_once('../Model/Reservation.php');
+    require_once('../autoload.php');
+
+    class Reservation {
 
         public function __controller() {
 
@@ -14,7 +17,7 @@
                     <td><?= $j.':00'; ?></td>
                     <?php
                         for ($i = 0; $i < 7; $i++) {
-                            $reservations = new Reservation();
+                            $reservations = new \Models\Reservation();
                             $reservation = $reservations->getDataReservation( date("Y-m-d", strtotime('Monday this week +'.($i + $_SESSION['date']).'days')) .' '.$j. ':00');
                             
                             if (!empty($reservation)) {
