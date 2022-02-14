@@ -2,7 +2,6 @@
 
 namespace Models;
 
-//require_once('Model.php');
 require_once('../autoload.php');
 
 class RegisterAuth extends Model{

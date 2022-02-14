@@ -2,7 +2,6 @@
 
     namespace Models;
 
-    //require_once('bdd.php');
     require_once('../autoload.php');
 
     abstract class Model {

@@ -1,9 +1,9 @@
 <?php 
     spl_autoload_register(function($className) {
-        var_dump($className);
+       
         /**
-         * $className  = Namespace\nomdufichier.php
-         * require = ../Namespace/nomdufichier.php
+         * $className  = nomduNamespace\nomdufichier.php
+         * require = ../nomduNamespace/nomdufichier.php
          * str_replace remplace toute les occurence dans une chaîne.
          */
         $className = str_replace("\\", "/", $className);

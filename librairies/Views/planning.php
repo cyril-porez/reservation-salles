@@ -14,6 +14,8 @@
    else if (isset($_GET['next'])) {
         $_SESSION["date"] = $_SESSION['date'] + 7;
    }
+
+   $days = ["Lundi ", "Mardi ", "Mercredi ", "Jeudi ", "Vendredi ", "Samedi ", "Dimanche "];
 ?>
 
 <html>  
@@ -31,7 +33,7 @@
             <thead>
                 <th></th>
                 <?php for ($i = 0; $i < 7; $i++): ?>
-                  <th><?= date("d-m-y", strtotime('Monday this week +'.($i + $_SESSION['date']).'days')); ?></th>
+                  <th><?= $days[$i]; echo date("d-m-y", strtotime('Monday this week +'.($i + $_SESSION['date']).'days')); ?></th>
                 <?php endfor ; ?>
             </thead>
             <tbody>

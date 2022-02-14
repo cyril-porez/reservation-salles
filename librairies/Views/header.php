@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,7 @@
                 <li><a href="deconnexion.php">Deconnexion</a></li>
             </ul>
             <?php
-                if (!empty($_SESSION)) {
+                if (!empty($_SESSION["user"])) {
                     echo "Bonjour" . " " . $_SESSION["user"]["login"] . " !";
                 }
             ?>
