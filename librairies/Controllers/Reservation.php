@@ -24,7 +24,7 @@
                                 $id_reservation = $reservation[0]["id"];
 
                                 echo "<td>
-                                        <a href=reservation.php?reservation=". $id_reservation .">";                                        
+                                        <a href=reservation.php?evenement=". $id_reservation .">";                                        
                                             echo $reservation[0]['login'] . '<br>';
                                             echo $reservation[0]['titre'];
                                         echo "

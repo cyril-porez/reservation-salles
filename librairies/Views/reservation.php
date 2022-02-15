@@ -1,10 +1,15 @@
 <?php
     require_once('../autoload.php');
-
-    $idUser = $_GET['reservation'];
-
-    $reservations = new \Controllers\Reservation();
-    $reservation = $reservations->getDataReservation($idUser);
+    session_start();
+    $idUser = $_GET['evenement'];
+    
+    if (!empty($_SESSION["user"])) {
+        $reservations = new \Controllers\Reservation();
+        $reservation = $reservations->getDataReservation($idUser);    
+    }
+    else {
+        header("Location: ../../index.php");
+    }
 ?>
 
 

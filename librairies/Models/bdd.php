@@ -1,5 +1,10 @@
 <?php
-    class Bdd2 {
+
+    namespace Models;
+
+    require_once('../autoload.php');
+
+    class Bdd {
         public $connex;
         
         /**

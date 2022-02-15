@@ -5,9 +5,10 @@
     require_once('../autoload.php');
 
     class RegisterAuth {
-       public $login;
-       public $password;
-       public $confirmPassword;
+       private $login;
+       private $password;
+       private $confirmPassword;
+       private $error = "";
 
         public function hashPassword($password, $confirmPassword) {
             if ($password == $confirmPassword) {
@@ -18,6 +19,10 @@
                 $insc->register($this->login, $hash);
                 header("Location: connexion.php");
             }
+            else {
+                $this->error = "* Le mot de passe et la confirmation du mot de passe ne correspondent pas !";
+            }
+            return $this->error;
         }
 
 
@@ -33,10 +38,14 @@
                 $_SESSION["user"] = $user;
                 header("Location: ../../index.php");
             }
+            else {
+                $this->error = "* Le mot de passe ou login ne corresponde pas !";
+            }
+            return $this->error;
         }
 
 
-        public function  verifLogin($login) {
+        public function verifLoginRegister($login) {
             $this->login = $login;
             $this->password;
             $this->confirmPassword;
@@ -46,36 +55,39 @@
             if ($count == 0) {
                 $this->hashPassword($this->password, $this->confirmPassword);
             }
-            else if ($count != 0) {
+            else {
+                $this->error = "* Ce Login existe déjà";
+            }
+            return $this->error;
+        }
+
+
+        public function verifLoginAuthentication($login) {
+            $this->login = $login;
+            $selectLogin = new \Models\RegisterAuth();
+            $count = $selectLogin->selectCountLogin($this->login);
+            if ($count != 0) {
                 $this->verifyPassword($this->password, $this->login);
             }
             else {
-                $msgError = "* Ce Login existe déjà";
+                $this->error = "* Aucun login correspond";
             }
+            return $this->error;
         }
 
         
-        public function createUser($login, $password, $confirmpassword) {
-            if (!empty($_POST["login"]) && !empty($_POST["password"]) && !empty($_POST["confirmPassword"])) {
-              $login = $_POST["login"];
-              $this->login = $login;
-              $password = $_POST["password"];
-              $this->password = $password;
-              $confirmPassword = $_POST["confirmPassword"];
-              $this->confirmPassword = $confirmPassword;
-              $this->verifLogin($this->login);
-            }
+        public function createUser($login, $password, $confirmPassword) {
+            $this->login = $login;
+            $this->password = $password;
+            $this->confirmPassword = $confirmPassword;
+            return $this->verifLoginRegister($this->login);
         } 
         
         
         public function connexionUser($login, $password) {
-            if (!empty($_POST["login"]) && !empty($_POST["password"])) {
-                $login = $_POST["login"];
-                $password = $_POST["password"];
-                $this->login = $login;
-                $this->password = $password;
-                $this->verifLogin($this->login);
-            }
+            $this->login = $login;
+            $this->password = $password;
+            return $this->verifLoginAuthentication($this->login);
         }
     }    
 ?>

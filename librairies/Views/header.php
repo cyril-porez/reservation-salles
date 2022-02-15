@@ -15,28 +15,28 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="../../index.php">Accueil</a></li>
-                <li><a href="connexion.php">Connexion</a></li>
-                <li><a href="inscription.php">Inscription</a></li>
-                <li><a href="profil.php">Profil</a></li>
-                <li><a href="planning.php">Planning</a></li>
-                <li><a href="reservation.php">Réservation</a></li>
-                <li><a href="reservation-form.php">Réserver</a></li>
-                <li><a href="deconnexion.php">Deconnexion</a></li>
-            </ul>
-            <?php
-                if (!empty($_SESSION["user"])) {
-                    echo "Bonjour" . " " . $_SESSION["user"]["login"] . " !";
-                }
-            ?>
+        <?php
+            if (!empty($_SESSION["user"])) {                    
+                echo' <ul>
+                    <li><a href="../../index.php">Accueil</a></li>
+                    <li><a href="profil.php">Profil</a></li>
+                    <li><a href="planning.php">Planning</a></li>
+                    <li><a href="reservation-form.php">Réserver</a></li>
+                    <li><a href="deconnexion.php">Deconnexion</a></li>
+                </ul>';
+                echo "Bonjour " . $_SESSION["user"]["login"] . " !";
+            }
+            else {
+                echo' <ul>
+                    <li><a href="../../index.php">Accueil</a></li>
+                    <li><a href="connexion.php">Connexion</a></li>
+                    <li><a href="inscription.php">Inscription</a></li>
+                    <li><a href="planning.php">Planning</a></li>
+                    <li><a href="reservation-form.php">Réserver</a></li>
+                </ul>';
+            }
+        ?>
         </nav>
     </header>
-    <!-- <main>
-
-    </main>
-    <footer>
-
-    </footer> -->
 </body>
 </html>

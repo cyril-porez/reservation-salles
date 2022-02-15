@@ -1,21 +1,16 @@
 <?php 
   session_start();
-  //require_once('bdd.php');
-  //require_once('../Model/User.php');
-  //require_once('../Controller/User.php');
+
   require_once('../autoload.php');
 
   if (!empty($_POST["login"])) {
-    $login = $_POST["login"];
     $update = new \Controllers\User();
-    $update->updateLogin($login);
+    $update->updateLogin($_POST["login"]);
   }
   else if (isset($_POST["modifPassword"])) {
     if (!empty($_POST["password"]) && !empty($_POST["confirmPassword"])) {
-      $password = $_POST["password"];
-      $confirmPassword = $_POST["confirmPassword"];
       $updatePass = new \Controllers\User();
-      $updatePass->updatePassword($password, $confirmPassword);
+      $updatePass->updatePassword($_POST["password"], $_POST["confirmPassword"]);
     }
   }
 ?>
