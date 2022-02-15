@@ -23,7 +23,6 @@
                         <li><a href="librairies/Views/connexion.php">Connexion</a></li>
                         <li><a href="librairies/Views/inscription.php">Inscription</a></li>
                         <li><a href="librairies/Views/planning.php">Planning</a></li>
-                        <li><a href="librairies/Views/reservation-form.php">Réserver</a></li>
                     </ul>';
                 }
             ?>
