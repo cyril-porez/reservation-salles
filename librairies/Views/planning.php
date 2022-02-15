@@ -16,8 +16,8 @@
    }
 ?>
 
-<html>  
-<body>
+
+<body id="body_planning">
     <header>
         <?php require_once('header.php'); ?>
     </header>
@@ -31,7 +31,7 @@
             <thead>
                 <th></th>
                 <?php for ($i = 0; $i < 7; $i++): ?>
-                  <th><?= date("d-m-y", strtotime('Monday this week +'.($i + $_SESSION['date']).'days')); ?></th>
+                    <th><?= date("d-m-y", strtotime('Monday this week +'.($i + $_SESSION['date']).'days')); ?></th>
                 <?php endfor ; ?>
             </thead>
             <tbody>
@@ -42,8 +42,4 @@
             </tbody>
         </table>
     </main>
-    <footer>
-        
-    </footer>
 </body>
-</html>

@@ -1,8 +1,4 @@
-body{
-    background-image: url(https://alurandco.fr/wp-content/uploads/2020/10/table-bois-brut-4.jpg);
-    background-size: cover;
-    display: block;   
-}
+
 
 form {
     
@@ -10,11 +6,12 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 250px auto;
-    border: 1px solid #AF601A;   
+    margin: 250px auto;  
+    background-color: rgba(0, 0, 0, 0.541);
+    
 }
 
-form input:first-of-type {  
+form input {  
    
     background-color: #FAE5D3;
     border-radius: 5px;
@@ -29,26 +26,8 @@ form input:first-of-type {
     
 }
 
-form input:nth-of-type(2){
-    
-    background-color: #FAE5D3;
-    border-radius: 5px;
-    border: 0;
-    box-sizing: border-box;
-    color: black;
-    font-size: 18px;
-    padding: 10px;
-    position: relative;
-    margin-top: 15px;
-    margin: 10px 10px;
-}
 
 form ::placeholder{
-    color: #AF601A;
-}
-
-form h3{
-    text-align: center;
     color: #AF601A;
 }
 

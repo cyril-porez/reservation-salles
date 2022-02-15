@@ -20,14 +20,14 @@ if (!empty($_POST["login"]) && !empty($_POST["password"])) {
         ?>
     
    </header>
-    <main id="main_connexion"> 
+    <main> 
     
         <form action="" method="POST">
 
-            <h3>Se connecter</h3>
+            <h1>Se connecter</h1>
             <input type="text" placeholder="login" name="login">
             <input type="password" placeholder="Password" name="password">
-            <button class="buttonco" type="submit" name="connexion">connexion</button>
+            <button type="submit" name="connexion">connexion</button>
         </form>
 
     </main>

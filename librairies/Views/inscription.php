@@ -11,10 +11,6 @@
     $register->createUser($_POST["login"], $_POST["password"], $_POST["confirmPassword"]);
   }
 ?>
-
-
-
-<body class="body_inscription">
     <header>
         <?php
           require_once('header.php');
@@ -37,5 +33,4 @@
         
     </form>
   </main>
-</body>
-</html>
+
