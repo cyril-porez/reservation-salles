@@ -18,8 +18,8 @@
    $days = ["Lundi ", "Mardi ", "Mercredi ", "Jeudi ", "Vendredi ", "Samedi ", "Dimanche "];
 ?>
 
-<html>  
-<body>
+
+<body id="body_planning">
     <header>
         <?php require_once('header.php'); ?>
     </header>
@@ -33,7 +33,11 @@
             <thead>
                 <th></th>
                 <?php for ($i = 0; $i < 7; $i++): ?>
+<<<<<<< HEAD
                   <th><?= $days[$i]; echo date("d-m-y", strtotime('Monday this week +'.($i + $_SESSION['date']).'days')); ?></th>
+=======
+                    <th><?= date("d-m-y", strtotime('Monday this week +'.($i + $_SESSION['date']).'days')); ?></th>
+>>>>>>> 426d429fea7e8fff16ed6c4ad063e206f770f821
                 <?php endfor ; ?>
             </thead>
             <tbody>
@@ -44,8 +48,4 @@
             </tbody>
         </table>
     </main>
-    <footer>
-        
-    </footer>
 </body>
-</html>

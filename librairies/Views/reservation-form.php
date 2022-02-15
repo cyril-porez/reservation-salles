@@ -66,8 +66,8 @@
     }
 ?>
 
-<html>
-<body>
+
+
     <header>
         <?php    
             require_once('header.php');
@@ -79,11 +79,7 @@
             <input type="text" name="description" placeholder="description">      
             <input type="datetime-local" name="début"  min="8:00" max="19:00" required placeholder="heure de début">
             <input type="datetime-local" name="fin" min="8:00" max="19:00" required placeholder="heure de fin">
-            <input type="submit" name="bouton" value="réservez"> 
+            <button type="submit" name="reserver">reserver</button>
         </form>
     </main>
-    <footer>
 
-    </footer>    
-</body>
-</html>
