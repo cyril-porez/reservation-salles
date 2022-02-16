@@ -14,7 +14,7 @@
 
 </head>
 <body>
-    <header>
+    <header class="main-head">
         <nav>
         <?php
             if (!empty($_SESSION["user"])) {                    

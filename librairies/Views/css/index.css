@@ -1,4 +1,23 @@
+*,*::before,*:hover{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{ 
+    font-size: 62.5%;
+}
+
+body{
+
+    background-size: cover;
+    display: block;   
+}
 
 li{
     font-size: 2rem;
@@ -8,6 +27,7 @@ a{
     text-decoration: none;
     
 }
+/* --------------------------------------------- Header -----------------------------------------------------------------------*/
 
 .main-head{
     background: #FAE5D3;
@@ -34,3 +54,4 @@ li a{
 li a:hover {
     background-color: #88b06a;
 }
+

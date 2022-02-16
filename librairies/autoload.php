@@ -1,6 +1,6 @@
 <?php 
     spl_autoload_register(function($className) {
-       
+    
         /**
          * $className  = nomduNamespace\nomdufichier.php
          * require = ../nomduNamespace/nomdufichier.php
@@ -9,6 +9,6 @@
         $className = str_replace("\\", "/", $className);
         
         require_once("../$className.php");
-      
+    
     }); 
 ?>
