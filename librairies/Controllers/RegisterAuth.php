@@ -67,11 +67,12 @@
             $selectLogin = new \Models\RegisterAuth();
             $count = $selectLogin->selectCountLogin($this->login);
             if ($count != 0) {
+               
                 $this->verifyPassword($this->password, $this->login);
             }
             else {
                 $this->error = "* Aucun login correspond";
-            }
+            }            
             return $this->error;
         }
 

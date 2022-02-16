@@ -1,5 +1,4 @@
 <?php
-    //require_once('../Controller/Reservation.php');
     require_once('../autoload.php');
 
     session_start();
@@ -33,11 +32,7 @@
             <thead>
                 <th></th>
                 <?php for ($i = 0; $i < 7; $i++): ?>
-<<<<<<< HEAD
                   <th><?= $days[$i]; echo date("d-m-y", strtotime('Monday this week +'.($i + $_SESSION['date']).'days')); ?></th>
-=======
-                    <th><?= date("d-m-y", strtotime('Monday this week +'.($i + $_SESSION['date']).'days')); ?></th>
->>>>>>> 426d429fea7e8fff16ed6c4ad063e206f770f821
                 <?php endfor ; ?>
             </thead>
             <tbody>
