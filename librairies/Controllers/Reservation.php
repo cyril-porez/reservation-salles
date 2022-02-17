@@ -15,7 +15,7 @@
         public function displayPlanning() {
             for ($j = 8; $j <= 18; $j++): ?>
                 <tr>
-                    <td><?= $j.':00'; ?></td>
+                    <td ><?= $j.':00'; ?></td>
                     <?php
                         for ($i = 0; $i < 7; $i++) {
                             $reservations = new \Models\Reservation();
@@ -29,10 +29,10 @@
                                             echo $reservation[0]['titre'];
                                         echo "
                                         </a>
-                                      </td>";
+                                    </td>";
                             }                            
                             else if (empty($reservation)) {?>
-                                   <td>
+                                <td>
                                         <a href="reservation-form.php"></a>
                                     </td>
                                 <?php

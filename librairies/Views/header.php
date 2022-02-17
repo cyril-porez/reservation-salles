@@ -33,7 +33,6 @@
                     <li><a href="connexion.php">Connexion</a></li>
                     <li><a href="inscription.php">Inscription</a></li>
                     <li><a href="planning.php">Planning</a></li>
-                    <li><a href="reservation-form.php">Réserver</a></li>
                 </ul>';
             }
         ?>
