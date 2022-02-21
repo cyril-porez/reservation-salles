@@ -83,6 +83,18 @@ session_start();
         </div>
     </div>
     
+<<<<<<< HEAD
+=======
+    <main>
+        <div class="container"> 
+            <div class ="box">
+                <div class="imgBx">
+                    <img src
+                </div>
+            </div>
+        </div>
+    </main>
+>>>>>>> main
     <footer>
         <footer class="footer">
             <div class="container">

@@ -6,7 +6,11 @@
 
     $error ="";
 
+<<<<<<< HEAD
      $currentDate = date("Y-m-d H:i");
+=======
+    echo $currentDate = date("Y-m-d H:i");
+>>>>>>> main
 
     $currentTime = explode(" ", $currentDate);
     $time = str_replace(":", ".", $currentTime[1]);

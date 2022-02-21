@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <?php
 session_start();
@@ -6,6 +7,15 @@ require_once('../autoload.php');
 
 $error = "";
 
+=======
+<?php
+session_start();
+
+require_once('../autoload.php');
+
+$error = "";
+
+>>>>>>> main
 if (!empty($_POST["login"]) && !empty($_POST["password"])) {
     $auth = new \Controllers\RegisterAuth;
     $error = $auth->connexionUser($_POST["login"], $_POST["password"]);
@@ -26,9 +36,13 @@ if (!empty($_POST["login"]) && !empty($_POST["password"])) {
         echo $error;
         ?>
     </form>
+<<<<<<< HEAD
 </main>
 <footer>
 <?php
     require_once('footer.php');
     ?>
 </footer>
+=======
+</main>
+>>>>>>> main
