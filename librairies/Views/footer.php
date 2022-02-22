@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Footer Design</title>
+	<title>Home</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/footer.css">
@@ -17,38 +17,27 @@
 				<div class="footer-col">
 					<h4>company</h4>
 					<ul>
-						<li><a href="#">about us</a></li>
-						<li><a href="#">our services</a></li>
-						<li><a href="#">privacy policy</a></li>
-						<li><a href="#">affiliate program</a></li>
+						<li><a href="https://laplateforme.io/qui-sommes-nous/">Qui sommrds </a></li>
+						<li><a href="https://laplateforme.io/informations/">Contact</a></li>
+						<li><a href="https://laplateforme.io/news/">Nouveauté</a></li>
+						
 					</ul>
 				</div>
 				<div class="footer-col">
-					<h4>get help</h4>
+					<h4>Github</h4>
 					<ul>
-						<li><a href="#">FAQ</a></li>
-						<li><a href="#">shipping</a></li>
-						<li><a href="#">returns</a></li>
-						<li><a href="#">order status</a></li>
-						<li><a href="#">payment options</a></li>
+						<li><a href="https://github.com/cyril-porez">Cyril</a></li>
+						<li><a href="https://github.com/carla-piazza1">Carla</a></li>
+						<li><a href="https://github.com/mohamad-sheikho?tab=repositories">Mohamad</a></li>
 					</ul>
 				</div>
 				<div class="footer-col">
-					<h4>online shop</h4>
-					<ul>
-						<li><a href="#">watch</a></li>
-						<li><a href="#">bag</a></li>
-						<li><a href="#">shoes</a></li>
-						<li><a href="#">dress</a></li>
-					</ul>
-				</div>
-				<div class="footer-col">
-					<h4>follow us</h4>
+					<h4>Nous suivre</h4>
 					<div class="social-links">
-						<a href="#"><i class="fab fa-facebook-f"></i></a>
-						<a href="#"><i class="fab fa-twitter"></i></a>
-						<a href="#"><i class="fab fa-instagram"></i></a>
-						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+						<a href="https://www.linkedin.com/in/mohamad-sheikho-b8823b230/"><i class="fab fa-linkedin"></i></a>
+						<a href="ERROR"><i class="fab fa-linkedin"></i></a>
+						<a href="ERROR"><i class="fab fa-linkedin"></i></a>
+						
 					</div>
 				</div>
 			</div>
