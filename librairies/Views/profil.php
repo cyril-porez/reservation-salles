@@ -31,3 +31,10 @@
     </form>
   </main>
 
+  <footer>
+  <footer>
+        <?php
+        require_once('footer.php');
+        ?>
+    </footer>
+  </footer>
