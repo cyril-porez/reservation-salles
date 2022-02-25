@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -29,3 +30,9 @@ if (!empty($_POST["login"]) && !empty($_POST["password"])) {
         ?>
     </form>
 </main>
+<footer>
+<?php
+    require_once('footer.php');
+    ?>
+</footer>
+

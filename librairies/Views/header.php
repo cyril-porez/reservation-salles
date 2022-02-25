@@ -16,6 +16,8 @@
 <body>
     <header class="main-head">
         <nav>
+            <img style=" width:10vh ; border-radius: 12px;" src="images/logo.png" alt="logo" class="logo">
+        
         <?php
             if (!empty($_SESSION["user"])) {                    
                 echo' <ul>

@@ -1,5 +1,6 @@
 
 
+
 li{
     font-size: 2rem;
 }
@@ -19,6 +20,7 @@ nav{
     width: 90%;
     margin: auto;
     padding:2rem;
+    justify-content: space-around;
 }
 nav ul{
     display: flex;
@@ -34,3 +36,4 @@ li a{
 li a:hover {
     background-color: #88b06a;
 }
+

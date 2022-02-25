@@ -6,7 +6,7 @@
 
     $error ="";
 
-    echo $currentDate = date("Y-m-d H:i");
+     $currentDate = date("Y-m-d H:i");
 
     $currentTime = explode(" ", $currentDate);
     $time = str_replace(":", ".", $currentTime[1]);
@@ -102,4 +102,10 @@
             ?>
         </form>
     </main>
+
+    <footer>
+    <?php
+    require_once('footer.php');
+    ?>
+    </footer>
 

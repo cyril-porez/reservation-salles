@@ -1,5 +1,5 @@
 <?php
-    require_once('../autoload.php');
+require_once('../autoload.php');
 
 session_start();
 if (!isset($_SESSION['date'])) {
@@ -50,9 +50,10 @@ $days = ["Lundi ", "Mardi ", "Mercredi ", "Jeudi ", "Vendredi ", "Samedi ", "Dim
             <thead>
 
                 <th></th>
-                <?php for ($i = 0; $i < 7; $i++): ?>
-                  <th><?= $days[$i]; echo date("d-m-y", strtotime('Monday this week +'.($i + $_SESSION['date']).'days')); ?></th>
-                <?php endfor ; ?>
+                <?php for ($i = 0; $i < 7; $i++) : ?>
+                    <th><?= $days[$i];
+                        echo date("d-m-y", strtotime('Monday this week +' . ($i + $_SESSION['date']) . 'days')); ?></th>
+                <?php endfor; ?>
             </thead>
             <tbody>
 

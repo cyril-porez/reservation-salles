@@ -28,4 +28,9 @@
       </p>       
     </form>
   </main>
+  <footer>
+<?php
+    require_once('footer.php');
+    ?>
+</footer>
 
