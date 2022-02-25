@@ -1,9 +1,5 @@
 <?php
-<<<<<<< HEAD
-require_once('../autoload.php');
-=======
     require_once('../autoload.php');
->>>>>>> main
 
 session_start();
 if (!isset($_SESSION['date'])) {
@@ -23,6 +19,7 @@ $days = ["Lundi ", "Mardi ", "Mercredi ", "Jeudi ", "Vendredi ", "Samedi ", "Dim
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,33 +30,32 @@ $days = ["Lundi ", "Mardi ", "Mercredi ", "Jeudi ", "Vendredi ", "Samedi ", "Dim
 
 
 <body>
+
     <header>
+
         <?php require_once('header.php'); ?>
     </header>
 
     <h1>Planning</h1>
 
     <div class="btn">
+
         <button><a href="planning.php?previous">précédent</a></button>
         <button><a href="planning.php?next">suivant</a></button>
     </div>
     <main>
 
         <table class="table-style">
+
             <thead>
+
                 <th></th>
-<<<<<<< HEAD
-                <?php for ($i = 0; $i < 7; $i++) : ?>
-                    <th><?= $days[$i];
-                        echo date("d-m-y", strtotime('Monday this week +' . ($i + $_SESSION['date']) . 'days')); ?></th>
-                <?php endfor; ?>
-=======
                 <?php for ($i = 0; $i < 7; $i++): ?>
                   <th><?= $days[$i]; echo date("d-m-y", strtotime('Monday this week +'.($i + $_SESSION['date']).'days')); ?></th>
                 <?php endfor ; ?>
->>>>>>> main
             </thead>
             <tbody>
+
                 <?php
                 $reservation = new \Controllers\Reservation();
                 $reservation->displayPlanning();
@@ -69,6 +65,7 @@ $days = ["Lundi ", "Mardi ", "Mercredi ", "Jeudi ", "Vendredi ", "Samedi ", "Dim
 
     </main>
     <footer>
+
     <?php
     require_once('footer.php');
     ?>

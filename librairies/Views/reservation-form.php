@@ -82,12 +82,15 @@
 
 
     <header>
+
         <?php    
             require_once('header.php');
         ?>
     </header>
     <main>
+
         <form action="" method="post">
+            
             <input type="text" name="titre" placeholder="titre">
             <input type="text" name="description" placeholder="description">      
             <input type="datetime-local" name="début"  min="8:00" max="19:00" required placeholder="heure de début">
