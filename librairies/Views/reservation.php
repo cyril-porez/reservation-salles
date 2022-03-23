@@ -20,10 +20,15 @@
         ?>
     </header>
     <main>
+        <h2>Nom</h2>
         <p><?php echo $reservation[0]["login"]; ?></p>
+        <h2>Titre</h2>
         <p><?php echo $reservation[0]["titre"]; ?></p>
+        <h2>Description</h2>
         <p><?php echo $reservation[0]["description"]; ?></p>
+        <h2>Début</h2>
         <p><?php echo $reservation[0]["debut"]; ?></p>
+        <h2>Fin</h2>
         <p><?php echo $reservation[0]["fin"]; ?></p>
 
 

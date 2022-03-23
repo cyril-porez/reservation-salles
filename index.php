@@ -25,8 +25,8 @@ session_start();
                         <li><a href="librairies/Views/planning.php">Planning</a></li>
                         <li><a href="librairies/Views/reservation-form.php">Réserver</a></li>
                         <li><a href="librairies/Views/deconnexion.php">Deconnexion</a></li>
-                    </ul>';
-                echo "Bonjour " . $_SESSION["user"]["login"] . " !";
+                    </ul>';?>
+                <P>Bonjour <?= $_SESSION["user"]["login"] ?> !</p><?php
             } else {
                 echo ' <ul>
                         <li><a href="index.php">Accueil</a></li>

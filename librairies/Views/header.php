@@ -26,8 +26,8 @@
                     <li><a href="planning.php">Planning</a></li>
                     <li><a href="reservation-form.php">Réserver</a></li>
                     <li><a href="deconnexion.php">Deconnexion</a></li>
-                </ul>';
-                echo "Bonjour " . $_SESSION["user"]["login"] . " !";
+                </ul>';?>
+                <p>Bonjour <?= $_SESSION["user"]["login"] ?> !</p><?php
             }
             else {
                 echo' <ul>

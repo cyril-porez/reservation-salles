@@ -17,7 +17,7 @@
 				<div class="footer-col">
 					<h4>company</h4>
 					<ul>
-						<li><a href="https://laplateforme.io/qui-sommes-nous/">Qui sommrds </a></li>
+						<li><a href="https://laplateforme.io/qui-sommes-nous/">Qui sommes nous</a></li>
 						<li><a href="https://laplateforme.io/informations/">Contact</a></li>
 						<li><a href="https://laplateforme.io/news/">Nouveauté</a></li>
 						
@@ -26,9 +26,9 @@
 				<div class="footer-col">
 					<h4>Github</h4>
 					<ul>
-						<li><a href="https://github.com/cyril-porez">Cyril</a></li>
-						<li><a href="https://github.com/carla-piazza1">Carla</a></li>
-						<li><a href="https://github.com/mohamad-sheikho?tab=repositories">Mohamad</a></li>
+						<li><a href="https://github.com/cyril-porez/reservation-salles">Cyril</a></li>
+						<li><a href="https://github.com/cyril-porez/reservation-salles">Carla</a></li>
+						<li><a href="https://github.com/cyril-porez/reservation-salles">Mohamad</a></li>
 					</ul>
 				</div>
 				<div class="footer-col">
