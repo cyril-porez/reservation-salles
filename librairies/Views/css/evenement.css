@@ -1,0 +1,28 @@
+main{
+
+}
+
+.evenement{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.evenement p{
+    font-size: 200%;
+    color: #AF601A;
+}
+
+.evenement h2{
+    font-size: 300%;
+    text-decoration : underline #88b06a;
+}
+
+
+
+h2{
+    color: #AF601A;
+}
