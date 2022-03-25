@@ -82,6 +82,7 @@
                                 if ($weekDay !== 'Saturday' && $weekDay !== "Sunday") {
                                     $reservation = new \Controllers\User();
                                     $reservation->reservation($title, $description, $start, $end, $idUser);
+                                    header("Location: planning.php");
                                 }
                                 else {
                                     $error = "* Vous ne pouvez pas réserver le Weekend";
