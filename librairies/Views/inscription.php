@@ -21,11 +21,7 @@
       <input type="password" name="password" placeholder="Mot de passe">
       <input type="password" name="confirmPassword" placeholder="confirmer le mot de passe">
       <button class="" name="connection" type="submit">S'inscrire</button>
-      <p>
-        <?php 
-            echo $error;
-        ?>
-      </p>       
+      <p><?= $error; ?></p>       
     </form>
   </main>
   <footer>

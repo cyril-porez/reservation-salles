@@ -43,3 +43,8 @@ form button {
     margin: 10px 10px;
 
 }
+
+form p {
+    color: red;
+    font-size: 15px;
+}

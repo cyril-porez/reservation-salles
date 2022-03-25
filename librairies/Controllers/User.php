@@ -45,6 +45,7 @@
         public function updatePassword($password, $confirmPassword) {
             $this->password = $password;
             $this->confirmPassword = $confirmPassword;
+            $error = "";
                 
             if ($password == $confirmPassword) {
                 $hash = password_hash($password, PASSWORD_DEFAULT);
