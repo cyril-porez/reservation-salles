@@ -7,14 +7,14 @@
     
     class User extends Model {
 
-        private $password;
-        private $confirmPassword;
-        public $connex;
-        public $login;
-        public $title;
-        public $description;
-        public $start;
-        public $end;
+        protected $password;
+        protected $confirmPassword;
+        protected $connex;
+        protected $login;
+        protected $title;
+        protected $description;
+        protected $start;
+        protected $end;
 
 
         public function infoUser($login) {

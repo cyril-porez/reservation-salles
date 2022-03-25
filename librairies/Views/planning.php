@@ -1,19 +1,20 @@
 <?php
-require_once('../autoload.php');
+    require_once('../autoload.php');
 
-session_start();
-if (!isset($_SESSION['date'])) {
-    $_SESSION['date'] = 0;
-}
+    session_start();
+    if (!isset($_SESSION['date'])) {
+        $_SESSION['date'] = 0;
+    }
 
 
-if (isset($_GET['previous'])) {
-    $_SESSION['date'] = $_SESSION['date'] - 7;
-} else if (isset($_GET['next'])) {
-    $_SESSION["date"] = $_SESSION['date'] + 7;
-}
+    if (isset($_GET['previous'])) {
+        $_SESSION['date'] = $_SESSION['date'] - 7;
+    } 
+    else if (isset($_GET['next'])) {
+        $_SESSION["date"] = $_SESSION['date'] + 7;
+    }
 
-$days = ["Lundi ", "Mardi ", "Mercredi ", "Jeudi ", "Vendredi ", "Samedi ", "Dimanche "];
+    $days = ["Lundi ", "Mardi ", "Mercredi ", "Jeudi ", "Vendredi ", "Samedi ", "Dimanche "];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,8 +59,8 @@ $days = ["Lundi ", "Mardi ", "Mercredi ", "Jeudi ", "Vendredi ", "Samedi ", "Dim
             <tbody>
 
                 <?php
-                $reservation = new \Controllers\Reservation();
-                $reservation->displayPlanning();
+                    $reservation = new \Controllers\Reservation();
+                    $reservation->displayPlanning();
                 ?>
             </tbody>
         </table>
@@ -68,7 +69,7 @@ $days = ["Lundi ", "Mardi ", "Mercredi ", "Jeudi ", "Vendredi ", "Samedi ", "Dim
     <footer>
 
     <?php
-    require_once('footer.php');
+        require_once('footer.php');
     ?>
     </footer>
 </body>

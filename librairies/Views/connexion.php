@@ -26,7 +26,7 @@ if (!empty($_POST["login"]) && !empty($_POST["password"])) {
         <input type="password" placeholder="Password" name="password">
         <button type="submit" name="connexion">connexion</button>
         <?php
-        echo $error;
+            echo $error;
         ?>
     </form>
 </main>

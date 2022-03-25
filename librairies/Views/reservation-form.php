@@ -1,6 +1,5 @@
 <?php
     session_start();
-    //require_once('../Controller/User.php');
 
     require_once('../autoload.php');
 
@@ -45,7 +44,7 @@
 
         if ($strStart[$i - 1] == '0' && $strStart[$i - 2] == '0' && $strEnd[$i - 1] == '0' && $strEnd[$i - 2] == '0') {
             if (count($verifReservation) == 0) {
-                //condition qui permet de réserver en 8H et 18H
+                //condition qui permet de réserver entre 8H et 18H
                 if ($intStart >= 8.00 && $intStart <= 18.00 && $intEnd >= 9.00 && $intEnd <= 19.00) {
                     if ($intEnd - $intStart == 1 && $explodeStart[0] == $explodeEnd[0]) {
                         if ($start > $currentDate) {
@@ -106,7 +105,7 @@
 
     <footer>
     <?php
-    require_once('footer.php');
+        require_once('footer.php');
     ?>
     </footer>
 

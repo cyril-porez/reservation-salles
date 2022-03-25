@@ -5,56 +5,58 @@
     require_once('../autoload.php');
 
     class User  {
-        public $login;
-        public $password;
-        public $confirmPassword;
-        public $titre;
-        public $description;
-        public $debut;
-        public $fin;
-        public $id_utilisateur;
+        protected $login;
+        protected $password;
+        protected $confirmPassword;
+        protected $titre;
+        protected $description;
+        protected $debut;
+        protected $fin;
+        protected $id_utilisateur;
 
         public function __construct() {
 
         }
 
 
-        public function updateLogin($login) {            
-            if (!empty($_POST["login"])) {
-                $login = $_POST["login"];
-                $this->login = $login;
-                $selectLogin = new \Models\RegisterAuth();
-                $count = $selectLogin->selectCountLogin($this->login);
+        public function updateLogin($login) {
+            $error = '';            
+            $this->login = $login;
+            $selectLogin = new \Models\RegisterAuth();
+            $count = $selectLogin->selectCountLogin($this->login);
                
-                if ($count == 0) {
-                    $updateLogin = new \Models\User();
-                    $updateLogin->updateLogin($this->login);
-                    $infoUser = $updateLogin->infoUser($this->login);
-                    $_SESSION["user"] = [
-                                            'id' => $infoUser['id'], 
-                                            'login' => $this->login, 
-                                            'password' => $infoUser['password'],
-                                        ];  
-                }
+            if ($count == 0) {
+                $updateLogin = new \Models\User();
+                $updateLogin->updateLogin($this->login);
+                $infoUser = $updateLogin->infoUser($this->login);
+                $_SESSION["user"] = [
+                                        'id' => $infoUser['id'], 
+                                        'login' => $this->login, 
+                                        'password' => $infoUser['password'],
+                                    ];  
             }
+            else {
+                $error = "* Ce login existe déjà !";
+            }
+            return $error;
         }
-
+        
 
         public function updatePassword($password, $confirmPassword) {
-            if (!empty($_POST["password"]) && !empty($_POST["confirmPassword"])) {
-                $password = $_POST["password"];
-                $this->password = $password;
-                $confirmPassword = $_POST["confirmPassword"];
-                $this->confirmPassword = $confirmPassword;
+            $this->password = $password;
+            $this->confirmPassword = $confirmPassword;
                 
-                if ($password == $confirmPassword) {
-                    $hash = password_hash($password, PASSWORD_DEFAULT);
-                    $updatePassword = new \Models\User();
-                    $updatePassword->updatePassword($hash);
-                }
+            if ($password == $confirmPassword) {
+                $hash = password_hash($password, PASSWORD_DEFAULT);
+                $updatePassword = new \Models\User();
+                $updatePassword->updatePassword($hash);
             }
+            else {
+                $error = "* Mot de passe et confirme mot de passe !";
+            }
+            return $error;
         }
-
+    
 
         public function reservation($titre, $description, $debut, $fin, $idUser) {
             $this->titre = $titre;
